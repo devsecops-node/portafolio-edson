@@ -1,11 +1,15 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ElementRef, ViewChild } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { MainComponent } from './components/main/main.component';
+import { InfoMainComponent } from './components/info-main/info-main.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    InfoMainComponent
   ],
   imports: [
     BrowserModule
@@ -13,4 +17,7 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+
+}
