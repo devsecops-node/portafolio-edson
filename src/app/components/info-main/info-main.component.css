@@ -1,3 +1,18 @@
+.imagen {
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  -ms-border-radius: 75px;
+  -o-border-radius: 75px;
+}
+
+/*
+@media(max-width:1024px){
+  .imagen{
+    top: 80px;
+  }
+} */
+
 .linea {
   width: 40px;
   /*Anchoinicialdelalínea*/
@@ -16,6 +31,7 @@
 .enlaces:hover p {
   color: white;
 }
+
 .enlaces:hover .linea {
   background-color: white;
 }
@@ -28,6 +44,7 @@
   cursor: pointer;
   position: relative;
 }
+
 /* Line aniamtion */
 .line-animation::after {
   content: "";
@@ -42,6 +59,7 @@
   transform-origin: bottom right;
   transition: transform 0.5s ease-out;
 }
+
 .line-animation:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;

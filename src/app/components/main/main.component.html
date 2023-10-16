@@ -16,7 +16,7 @@
   <section #classes id="classes" class="flex flex-col gap-3 card-principal" >
     <div *ngFor="let proyect of proyects" id="{{proyect.semana}}" class="flex flex-row gap-7 p-5 card activate-poper" (click)="activatePoper($event)">
       <div>
-        <p class="text-slate-500 text-[15px]">Semana - {{ proyect.semana }}
+        <p class="text-slate-500 text-[15px] whitespace-nowrap">Semana - {{ proyect.semana }}
         </p>
       </div>
       <div>
