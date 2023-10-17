@@ -1,8 +1,13 @@
-<div class="p-20 h-screen flex flex-col lg:ml-[120px] lg:flex-row">
-  <section class="info-relative">
-    <app-info-main></app-info-main>
-  </section>
-  <section class="flex-1" #about>
-    <app-main></app-main>
-  </section>
+<div class="relative">
+  <div *ngIf="proyectToPopUp && activate" class="popup">
+    <app-popup [proeyctToActivate]="proyectToPopUp" (desacPopUP)="desactivatePopUp($event)"></app-popup>
+  </div>
+  <div class="p-20 h-screen flex flex-col lg:ml-[120px] lg:flex-row">
+    <section class="info-relative">
+      <app-info-main></app-info-main>
+    </section>
+    <section class="flex-1" #about>
+      <app-main (activatePopUp)="activatePopup($event)"></app-main>
+    </section>
+  </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild, Output,EventEmitter } from '@angular/core';
 import { ProvideSectionsService, ProyectsUI } from 'src/app/services/provide-sections.service';
 
 @Component({
@@ -8,11 +8,12 @@ import { ProvideSectionsService, ProyectsUI } from 'src/app/services/provide-sec
 })
 export class MainComponent implements OnChanges {
 
+  @Output() activatePopUp = new EventEmitter<ProyectsUI>()
+
+
   proyects: Array<ProyectsUI> = []
-  data:boolean = false
   constructor(private provideSection:ProvideSectionsService){
     this.proyects = this.provideSection.getAlllProyects()
-    console.log(this.proyects)
   }
 
 
@@ -20,8 +21,7 @@ export class MainComponent implements OnChanges {
 
   }
 
-  activatePoper(event:any){
-    console.log(event.target.id)
-    this.data = !this.data
+  activatePoper(proyect:ProyectsUI){
+    this.activatePopUp.emit(proyect)
   }
 }
