@@ -36,9 +36,36 @@
   gap: 5px;
 }
 
+.text-blur {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+@media(max-width:720px){
+  .text-blur{
+    filter: blur(0);
+    -webkit-filter: blur(0);
+}
+}
+
+.text-blur:hover{
+  filter: blur(0);
+  -webkit-filter: blur(0);
+}
+
 @media(max-width:720px){
   .popup-main{
     width: 90%;
     font-size: 13px;
   }
 }
+/* :root{
+  --azul: #0f172a;
+  --blanco: white;
+  --subtitle: #52d0d1;
+} */
